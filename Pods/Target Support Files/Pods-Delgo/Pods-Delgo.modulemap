@@ -1,6 +1,0 @@
-framework module Pods_Delgo {
-  umbrella header "Pods-Delgo-umbrella.h"
-
-  export *
-  module * { export * }
-}
