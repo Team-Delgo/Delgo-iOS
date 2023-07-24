@@ -111,8 +111,10 @@ extension MainWebViewController {
     webView?.scrollView.alwaysBounceVertical = false
     webView?.scrollView.alwaysBounceHorizontal = false
     
-      // allowsBackForwardNavigationGestures를 true로 설정
-          webView?.allowsBackForwardNavigationGestures = true
+    // allowsBackForwardNavigationGestures를 true로 설정
+    webView?.allowsBackForwardNavigationGestures = true
+    
+    webView?.navigationDelegate = self
       
     let myURL = URL(string:"https://www.reward.delgo.pet")
     
@@ -223,7 +225,6 @@ extension MainWebViewController {
 
 extension MainWebViewController {
   
-  
   @objc
   func keyboardUp(notification: NSNotification) {
     if let keyboardFrame:NSValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
@@ -252,4 +253,21 @@ extension MainWebViewController {
     shouldScreenUp = false
   }
   
+}
+
+// MARK: WKNavi
+
+extension MainWebViewController: WKNavigationDelegate {
+
+  func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction) async -> WKNavigationActionPolicy {
+    if navigationAction.request.url?.scheme == "tel",
+       let url = navigationAction.request.url,
+       UIApplication.shared.canOpenURL(url)
+    {
+      await UIApplication.shared.open(url)
+      return .cancel
+    } else {
+      return .allow
+    }
+  }
 }
