@@ -260,11 +260,12 @@ extension MainWebViewController {
 extension MainWebViewController: WKNavigationDelegate {
 
   func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction) async -> WKNavigationActionPolicy {
+    
     if navigationAction.request.url?.scheme == "tel",
        let url = navigationAction.request.url,
        UIApplication.shared.canOpenURL(url)
     {
-      await UIApplication.shared.open(url)
+      UIApplication.shared.open(url, completionHandler: nil)
       return .cancel
     } else {
       return .allow
