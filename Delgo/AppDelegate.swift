@@ -27,15 +27,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
             options: authOptions,
             completionHandler: { _, _ in }
         )
-        
         application.registerForRemoteNotifications()
-        
-        /// https://firebase.google.com/docs/cloud-messaging/ios/client#set-the-messaging-delegate
-        self.setUpFirebaseMessaging()
-        
         return true
     }
-    
+  
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+      /// https://firebase.google.com/docs/cloud-messaging/ios/client#set-the-messaging-delegate
+      self.setUpFirebaseMessaging()
+    }
+  
+    func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
+      print(error)
+    }
+      
     func applicationDidBecomeActive(_ application: UIApplication) {
         AppEvents.activateApp()
     }
