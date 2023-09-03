@@ -15,13 +15,15 @@ import FBSDKCoreKit
 final class MainWebViewController: UIViewController {
   
   //MARK: UI Properties
-  private var webView: WKWebView?
+  private var webView: WKWebView!
   private var shouldScreenUp = false
   
   //MARK: Initialization
   init() {
     super.init(nibName: nil, bundle: nil)
-    view.backgroundColor = .white
+    self.setUpWebView()
+    self.configureUI()
+    self.setConstraints()
   }
   
   required init?(coder: NSCoder) {
@@ -29,19 +31,9 @@ final class MainWebViewController: UIViewController {
   }
   
   override func viewDidLoad() {
-    
     super.viewDidLoad()
-      
     self.clearCacheWhenUpdated()
-    
-    self.configureWebView()
-    
-    self.configureUI()
-    
     self.setSwipeMotion()
-    
-    let request = URLRequest(url: URL(string:"https://www.reward.delgo.pet")!)
-    webView?.load(request)
   }
   
   override func viewWillAppear(_ animated: Bool) {
@@ -61,23 +53,15 @@ final class MainWebViewController: UIViewController {
   }
   
   private func configureUI() {
-    guard let webView = webView else {
-      return
-    }
+    self.view.backgroundColor = .white
     self.view.addSubview(webView)
     self.setConstraints()
   }
   
   private func setConstraints() {
-    
-    guard let webView = webView else {
-      return
-    }
-    
     webView.snp.makeConstraints {
       $0.edges.equalTo(view.safeAreaLayoutGuide)
     }
-    
   }
 }
 
@@ -85,7 +69,7 @@ final class MainWebViewController: UIViewController {
 
 extension MainWebViewController {
   
-  private func configureWebView() {
+  private func setUpWebView() {
     
     let userContentController = WKUserContentController().then {
       $0.add(self, name: JSMessageType.sendFCMToken.rawValue)
@@ -109,6 +93,9 @@ extension MainWebViewController {
       $0.allowsBackForwardNavigationGestures = true
       $0.navigationDelegate = self
     }
+    
+    let request = URLRequest(url: URL(string:"https://www.reward.delgo.pet")!)
+    webView.load(request)
   }
 }
 
@@ -189,10 +176,10 @@ extension MainWebViewController: WKScriptMessageHandler {
 extension MainWebViewController {
     
     func clearCacheWhenUpdated() {
-        print(Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as! String)
-//        WKWebsiteDataStore.default().removeData(ofTypes: [WKWebsiteDataTypeDiskCache, WKWebsiteDataTypeCookies, WKWebsiteDataTypeMemoryCache], for: []) {
-//            print("clear cache")
-//        }
+//        print(Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as! String)
+        WKWebsiteDataStore.default().removeData(ofTypes: [WKWebsiteDataTypeDiskCache, WKWebsiteDataTypeCookies, WKWebsiteDataTypeMemoryCache], for: []) {
+            print("clear cache")
+        }
     }
     
 }
