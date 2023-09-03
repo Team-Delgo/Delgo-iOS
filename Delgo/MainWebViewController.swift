@@ -39,6 +39,9 @@ final class MainWebViewController: UIViewController {
     self.configureUI()
     
     self.setSwipeMotion()
+    
+    let request = URLRequest(url: URL(string:"https://www.reward.delgo.pet")!)
+    webView?.load(request)
   }
   
   override func viewWillAppear(_ animated: Bool) {
@@ -58,14 +61,10 @@ final class MainWebViewController: UIViewController {
   }
   
   private func configureUI() {
-    
     guard let webView = webView else {
       return
     }
-    
-    
     self.view.addSubview(webView)
-    
     self.setConstraints()
   }
   
@@ -100,26 +99,16 @@ extension MainWebViewController {
       $0.allowsInlineMediaPlayback = true
     }
     
-    webView = WKWebView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width,
-                                      height: UIScreen.main.bounds.height),
-                        configuration: webViewConfig)
-    
-    webView?.scrollView.showsVerticalScrollIndicator = false
-    webView?.scrollView.showsHorizontalScrollIndicator = false
-    webView?.scrollView.bounces = false
-    webView?.scrollView.alwaysBounceVertical = false
-    webView?.scrollView.alwaysBounceHorizontal = false
-    
-    // allowsBackForwardNavigationGestures를 true로 설정
-    webView?.allowsBackForwardNavigationGestures = true
-    
-    webView?.navigationDelegate = self
-      
-    let myURL = URL(string:"https://www.reward.delgo.pet")
-    
-    let myRequest = URLRequest(url: myURL!)
-    
-    webView?.load(myRequest)
+    webView = WKWebView(frame: .zero,
+                        configuration: webViewConfig).then {
+      $0.scrollView.showsVerticalScrollIndicator = false
+      $0.scrollView.showsHorizontalScrollIndicator = false
+      $0.scrollView.bounces = false
+      $0.scrollView.alwaysBounceVertical = false
+      $0.scrollView.alwaysBounceHorizontal = false
+      $0.allowsBackForwardNavigationGestures = true
+      $0.navigationDelegate = self
+    }
   }
 }
 
