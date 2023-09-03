@@ -15,24 +15,10 @@ import FBSDKCoreKit
 final class MainWebViewController: UIViewController {
   
   //MARK: UI Properties
-  
   private var webView: WKWebView?
   private var shouldScreenUp = false
   
-  private lazy var scriptConfig = WKWebViewConfiguration().then {
-    $0.userContentController = self.scriptController
-    $0.allowsInlineMediaPlayback = true
-  }
-  
-  private lazy var scriptController = WKUserContentController().then {
-    $0.add(self, name: JSMessageType.sendFCMToken.rawValue)
-    $0.add(self, name: JSMessageType.goToPlusFriend.rawValue)
-    $0.add(self, name: JSMessageType.handleWhenKeyboardUp.rawValue)
-    $0.add(self, name: JSMessageType.goToPlusFriends.rawValue)
-  }
-  
   //MARK: Initialization
-  
   init() {
     super.init(nibName: nil, bundle: nil)
     view.backgroundColor = .white
@@ -102,8 +88,21 @@ extension MainWebViewController {
   
   private func configureWebView() {
     
-    webView = WKWebView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height),
-                        configuration: self.scriptConfig)
+    let userContentController = WKUserContentController().then {
+      $0.add(self, name: JSMessageType.sendFCMToken.rawValue)
+      $0.add(self, name: JSMessageType.goToPlusFriend.rawValue)
+      $0.add(self, name: JSMessageType.handleWhenKeyboardUp.rawValue)
+      $0.add(self, name: JSMessageType.goToPlusFriends.rawValue)
+    }
+    
+    let webViewConfig = WKWebViewConfiguration().then {
+      $0.userContentController = userContentController
+      $0.allowsInlineMediaPlayback = true
+    }
+    
+    webView = WKWebView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width,
+                                      height: UIScreen.main.bounds.height),
+                        configuration: webViewConfig)
     
     webView?.scrollView.showsVerticalScrollIndicator = false
     webView?.scrollView.showsHorizontalScrollIndicator = false
@@ -135,7 +134,6 @@ enum JSMessageType: String {
 }
 
 extension MainWebViewController: WKScriptMessageHandler {
-  
   /// JS-> Native 콜백 처리
   func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
     
