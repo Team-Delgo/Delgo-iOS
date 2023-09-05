@@ -131,7 +131,7 @@ extension MainWebViewController: WKScriptMessageHandler {
           return
         }
         
-        guard let url = URL(string: "https://reward.delgo.pet:8443/api/fcm/token") else {
+        guard let url = URL(string: "https://www.reward.delgo.pet/api/fcm/token") else {
           return
         }
         
@@ -154,8 +154,7 @@ extension MainWebViewController: WKScriptMessageHandler {
         
         request.httpBody = body
         
-        URLSession.shared.dataTask(with: request) { _, _, _ in }
-        .resume()
+        try? await URLSession.shared.data(for: request)
       }
       
       
