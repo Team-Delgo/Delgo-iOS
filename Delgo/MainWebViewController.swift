@@ -154,8 +154,7 @@ extension MainWebViewController: WKScriptMessageHandler {
         
         request.httpBody = body
         
-        URLSession.shared.dataTask(with: request) { _, _, _ in }
-        .resume()
+        try? await URLSession.shared.data(for: request)
       }
       
       
