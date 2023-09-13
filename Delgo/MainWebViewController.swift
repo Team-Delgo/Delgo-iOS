@@ -176,7 +176,16 @@ extension MainWebViewController {
     
     func clearCacheWhenUpdated() {
 //        print(Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as! String)
-        WKWebsiteDataStore.default().removeData(ofTypes: [WKWebsiteDataTypeDiskCache, WKWebsiteDataTypeCookies, WKWebsiteDataTypeMemoryCache], for: []) {
+        WKWebsiteDataStore.default().removeData(ofTypes: [
+                        WKWebsiteDataTypeDiskCache,
+                        WKWebsiteDataTypeOfflineWebApplicationCache,
+                        WKWebsiteDataTypeWebSQLDatabases,
+                        WKWebsiteDataTypeIndexedDBDatabases,
+                        WKWebsiteDataTypeLocalStorage,
+//                      WKWebsiteDataTypeCookies,
+                        WKWebsiteDataTypeLocalStorage,
+                        WKWebsiteDataTypeSessionStorage,
+                        WKWebsiteDataTypeMemoryCache], for: []) {
             print("clear cache")
         }
     }
