@@ -34,13 +34,11 @@ final class MainWebViewController: UIViewController {
     super.viewDidLoad()
     self.clearCacheWhenUpdated()
     self.setSwipeMotion()
+    
   }
   
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
-    /*
-     키보드 해지하고 싶으면 64, 65번째줄 주석처리
-     */
     NotificationCenter.default.addObserver(self, selector: #selector(keyboardUp), name: UIResponder.keyboardWillShowNotification, object: nil)
     NotificationCenter.default.addObserver(self, selector: #selector(keyboardDown), name: UIResponder.keyboardWillHideNotification, object: nil)
   }
@@ -66,16 +64,15 @@ final class MainWebViewController: UIViewController {
 }
 
 //MARK: Func
-
 extension MainWebViewController {
   
   private func setUpWebView() {
-    
     let userContentController = WKUserContentController().then {
       $0.add(self, name: JSMessageType.sendFCMToken.rawValue)
       $0.add(self, name: JSMessageType.goToPlusFriend.rawValue)
       $0.add(self, name: JSMessageType.handleWhenKeyboardUp.rawValue)
       $0.add(self, name: JSMessageType.goToPlusFriends.rawValue)
+      $0.add(self, name: JSMessageType.shareDelgoProfile.rawValue)
     }
     
     let webViewConfig = WKWebViewConfiguration().then {
@@ -83,8 +80,7 @@ extension MainWebViewController {
       $0.allowsInlineMediaPlayback = true
     }
     
-    webView = WKWebView(frame: .zero,
-                        configuration: webViewConfig).then {
+    webView = WKWebView(frame: .zero, configuration: webViewConfig).then {
       $0.scrollView.showsVerticalScrollIndicator = false
       $0.scrollView.showsHorizontalScrollIndicator = false
       $0.scrollView.bounces = false
@@ -100,27 +96,23 @@ extension MainWebViewController {
 }
 
 //MARK: WKScriptMessageHandler
-
 enum JSMessageType: String {
-  
   case sendFCMToken = "sendFcmToken"
   case goToPlusFriend
   case handleWhenKeyboardUp = "screenUp"
   case goToPlusFriends
+  case shareDelgoProfile = "shareDelgoProfile"
+    
 }
 
 extension MainWebViewController: WKScriptMessageHandler {
-  /// JS-> Native 콜백 처리
   func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
-    
     guard let messageType = JSMessageType(rawValue: message.name) else {
       return
     }
     
     switch messageType {
-      
     case .sendFCMToken:
-      
       guard let userID = message.body as? Int else {
         return
       }
@@ -157,7 +149,6 @@ extension MainWebViewController: WKScriptMessageHandler {
         try? await URLSession.shared.data(for: request)
       }
       
-      
     case .goToPlusFriend:
       return
     case .handleWhenKeyboardUp:
@@ -166,7 +157,11 @@ extension MainWebViewController: WKScriptMessageHandler {
       let url = URL(string: "kakaoplus://plusfriend/friend/@delgo")!
       if UIApplication.shared.canOpenURL(url) {
         UIApplication.shared.open(url, options: [:], completionHandler: nil)
-      } 
+      }
+    case .shareDelgoProfile:
+      if let urlString = message.body as? String, let url = URL(string: urlString) {
+        share(url: url)
+      }
     }
   }
 }
@@ -236,6 +231,17 @@ extension MainWebViewController {
   }
   
 }
+
+
+// MARK: - Share Function
+extension MainWebViewController {
+    func share(url: URL) {
+        let activityViewController = UIActivityViewController(activityItems: [url], applicationActivities: nil)
+        present(activityViewController, animated: true, completion: nil)
+    }
+}
+
+
 
 // MARK: WKNavi
 
