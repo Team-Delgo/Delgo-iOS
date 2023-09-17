@@ -213,7 +213,7 @@ extension MainWebViewController {
         UIView.animate(
           withDuration: 0.3
           , animations: {
-            let insets = UIEdgeInsets(top: 0, left: 0, bottom: keyboardRectangle.height, right: 0)
+              _ = UIEdgeInsets(top: 0, left: 0, bottom: keyboardRectangle.height, right: 0)
             webView.transform = CGAffineTransform(translationX: 0, y: -keyboardRectangle.height)
           }
         )
