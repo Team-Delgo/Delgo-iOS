@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4C2E740E29E9098100745BBB /* MyLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2E740D29E9098100745BBB /* MyLocationManager.swift */; };
+		4C72A3FE2AD9915900695017 /* AirBridge in Frameworks */ = {isa = PBXBuildFile; productRef = 4C72A3FD2AD9915900695017 /* AirBridge */; };
 		4C7EAA7A2AA6198F00B57D4C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AB90D1294EDD9800700428 /* AppDelegate.swift */; };
 		811B5EC02961630800F7A77F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 811B5EBF2961630800F7A77F /* GoogleService-Info.plist */; };
 		81AB90D4294EDD9800700428 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AB90D3294EDD9800700428 /* SceneDelegate.swift */; };
@@ -45,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C72A3FE2AD9915900695017 /* AirBridge in Frameworks */,
 				AB949F18AA023C7FE3D5657F /* Pods_Delgo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -132,6 +134,9 @@
 			dependencies = (
 			);
 			name = Delgo;
+			packageProductDependencies = (
+				4C72A3FD2AD9915900695017 /* AirBridge */,
+			);
 			productName = Delgo;
 			productReference = 81AB90CE294EDD9800700428 /* Delgo.app */;
 			productType = "com.apple.product-type.application";
@@ -161,6 +166,9 @@
 				ko,
 			);
 			mainGroup = 81AB90C5294EDD9800700428;
+			packageReferences = (
+				4C72A3FC2AD9915900695017 /* XCRemoteSwiftPackageReference "airbridge-ios-sdk-deploy" */,
+			);
 			productRefGroup = 81AB90CF294EDD9800700428 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -436,7 +444,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.5.3;
+				MARKETING_VERSION = 2.5.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.delgo.delgoreward.Delgo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -492,7 +500,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.5.3;
+				MARKETING_VERSION = 2.5.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.delgo.delgoreward.Delgo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -524,6 +532,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4C72A3FC2AD9915900695017 /* XCRemoteSwiftPackageReference "airbridge-ios-sdk-deploy" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ab180/airbridge-ios-sdk-deploy";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.34.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4C72A3FD2AD9915900695017 /* AirBridge */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4C72A3FC2AD9915900695017 /* XCRemoteSwiftPackageReference "airbridge-ios-sdk-deploy" */;
+			productName = AirBridge;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 81AB90C6294EDD9800700428 /* Project object */;
 }
