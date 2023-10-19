@@ -17,13 +17,11 @@
 		81AB90DE294EDD9900700428 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB90DC294EDD9900700428 /* LaunchScreen.storyboard */; };
 		81AB90E6294EDFB200700428 /* MainWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AB90E5294EDFB200700428 /* MainWebViewController.swift */; };
 		81AB90EF294F420900700428 /* FCMToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AB90EE294F420900700428 /* FCMToken.swift */; };
-		AB949F18AA023C7FE3D5657F /* Pods_Delgo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DC79A7F413DD528525B4B65 /* Pods_Delgo.framework */; };
+		933693ACD74760DB77BB5B28 /* Pods_Delgo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0457D101974B1F3AE1E75D09 /* Pods_Delgo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		03E44354B670E5961C2A33FF /* Pods-Delgo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Delgo.release.xcconfig"; path = "Target Support Files/Pods-Delgo/Pods-Delgo.release.xcconfig"; sourceTree = "<group>"; };
-		0C738D3B3939E33EAF76BDD2 /* Pods-Delgo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Delgo.debug.xcconfig"; path = "Target Support Files/Pods-Delgo/Pods-Delgo.debug.xcconfig"; sourceTree = "<group>"; };
-		0DC79A7F413DD528525B4B65 /* Pods_Delgo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Delgo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0457D101974B1F3AE1E75D09 /* Pods_Delgo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Delgo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C29A20B2A56E6DC007EC910 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		4C2E740D29E9098100745BBB /* MyLocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLocationManager.swift; sourceTree = "<group>"; };
 		4C84CC8429ADD8B1001D3A20 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Main.strings; sourceTree = "<group>"; };
@@ -39,6 +37,8 @@
 		81AB90E5294EDFB200700428 /* MainWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWebViewController.swift; sourceTree = "<group>"; };
 		81AB90EC294EF87300700428 /* Delgo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Delgo.entitlements; sourceTree = "<group>"; };
 		81AB90EE294F420900700428 /* FCMToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCMToken.swift; sourceTree = "<group>"; };
+		829B030C78136A491F4DAAB7 /* Pods-Delgo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Delgo.release.xcconfig"; path = "Target Support Files/Pods-Delgo/Pods-Delgo.release.xcconfig"; sourceTree = "<group>"; };
+		D47FB7EA54175D0C64CDCAF6 /* Pods-Delgo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Delgo.debug.xcconfig"; path = "Target Support Files/Pods-Delgo/Pods-Delgo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,7 +47,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C72A3FE2AD9915900695017 /* AirBridge in Frameworks */,
-				AB949F18AA023C7FE3D5657F /* Pods_Delgo.framework in Frameworks */,
+				933693ACD74760DB77BB5B28 /* Pods_Delgo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,7 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				4C29A20B2A56E6DC007EC910 /* libz.tbd */,
-				0DC79A7F413DD528525B4B65 /* Pods_Delgo.framework */,
+				0457D101974B1F3AE1E75D09 /* Pods_Delgo.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -110,8 +110,8 @@
 		D97BD618BBF7A26F9A2D5109 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				0C738D3B3939E33EAF76BDD2 /* Pods-Delgo.debug.xcconfig */,
-				03E44354B670E5961C2A33FF /* Pods-Delgo.release.xcconfig */,
+				D47FB7EA54175D0C64CDCAF6 /* Pods-Delgo.debug.xcconfig */,
+				829B030C78136A491F4DAAB7 /* Pods-Delgo.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -123,11 +123,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 81AB90E2294EDD9900700428 /* Build configuration list for PBXNativeTarget "Delgo" */;
 			buildPhases = (
-				FAB9C0BD4AF90E4A6B3A5F27 /* [CP] Check Pods Manifest.lock */,
+				F7B33FAB1104067E36C78311 /* [CP] Check Pods Manifest.lock */,
 				81AB90CA294EDD9800700428 /* Sources */,
 				81AB90CB294EDD9800700428 /* Frameworks */,
 				81AB90CC294EDD9800700428 /* Resources */,
-				0D625F7EB1B4448752D62A5A /* [CP] Embed Pods Frameworks */,
+				4226E14903F65D199EFD96F5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -193,7 +193,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0D625F7EB1B4448752D62A5A /* [CP] Embed Pods Frameworks */ = {
+		4226E14903F65D199EFD96F5 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -210,7 +210,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Delgo/Pods-Delgo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		FAB9C0BD4AF90E4A6B3A5F27 /* [CP] Check Pods Manifest.lock */ = {
+		F7B33FAB1104067E36C78311 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -399,7 +399,7 @@
 		};
 		81AB90E3294EDD9900700428 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0C738D3B3939E33EAF76BDD2 /* Pods-Delgo.debug.xcconfig */;
+			baseConfigurationReference = D47FB7EA54175D0C64CDCAF6 /* Pods-Delgo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -456,7 +456,7 @@
 		};
 		81AB90E4294EDD9900700428 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 03E44354B670E5961C2A33FF /* Pods-Delgo.release.xcconfig */;
+			baseConfigurationReference = 829B030C78136A491F4DAAB7 /* Pods-Delgo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
