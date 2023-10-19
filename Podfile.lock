@@ -1,4 +1,5 @@
 PODS:
+  - AirBridge (1.33.4)
   - FBAudienceNetwork (6.12.0)
   - FBSDKCoreKit/Basics (6.5.2)
   - FBSDKCoreKit/Core (6.5.2):
@@ -96,6 +97,7 @@ PODS:
   - Then (3.0.0)
 
 DEPENDENCIES:
+  - AirBridge (= 1.33.4)
   - FBAudienceNetwork
   - FBSDKCoreKit/Swift
   - FirebaseAnalytics
@@ -105,6 +107,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - AirBridge
     - FBAudienceNetwork
     - FBSDKCoreKit
     - FirebaseAnalytics
@@ -121,6 +124,7 @@ SPEC REPOS:
     - Then
 
 SPEC CHECKSUMS:
+  AirBridge: 8e0814825f929ee4fe658aa980be2bd1b008059f
   FBAudienceNetwork: e0fcc9091fced34910ed0b6da06f129db46ac9e6
   FBSDKCoreKit: ada5c8a05188daefc9addb985c52b8a1b26da519
   FirebaseAnalytics: 6c6bf99e8854475bf1fa342028841be8ecd236da
@@ -136,6 +140,6 @@ SPEC CHECKSUMS:
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
   Then: 844265ae87834bbe1147d91d5d41a404da2ec27d
 
-PODFILE CHECKSUM: 58d21453a0551ba92e45c6f21d7155ef760ff09b
+PODFILE CHECKSUM: 0104286642549c7d31a654ba364a65414514e3d7
 
-COCOAPODS: 1.12.1
+COCOAPODS: 1.13.0

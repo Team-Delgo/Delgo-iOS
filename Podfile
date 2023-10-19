@@ -11,6 +11,7 @@ target 'Delgo' do
     pod 'Then'
     pod 'FBAudienceNetwork'
     pod 'FBSDKCoreKit/Swift'  
+    pod 'AirBridge', '1.33.4'
 
   # Pods for Firebase
     # Add the Firebase pod for Google Analytics
