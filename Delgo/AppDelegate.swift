@@ -10,6 +10,11 @@ import FirebaseCore
 import FirebaseMessaging
 import FBSDKCoreKit
 import AirBridge
+import AdSupport
+
+
+
+
 
 
 @main
@@ -22,6 +27,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseApp.configure()
         
         UNUserNotificationCenter.current().delegate = self
+        
+        //Ad식별자 'https://developer.apple.com/documentation/adsupport'
+        
+        let sharedASIdentifierManager = ASIdentifierManager.shared()
+        var adID = sharedASIdentifierManager.advertisingIdentifier
         
         let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
         UNUserNotificationCenter.current().requestAuthorization(
