@@ -12,11 +12,6 @@ import FBSDKCoreKit
 import AirBridge
 import AdSupport
 
-
-
-
-
-
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
@@ -30,7 +25,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //Ad식별자 'https://developer.apple.com/documentation/adsupport'
         
+        AirBridge.getInstance("ce116649821f4c9fab702a34765735b2", appName:"delgo", withLaunchOptions:launchOptions)
+        
         let sharedASIdentifierManager = ASIdentifierManager.shared()
+        
         var adID = sharedASIdentifierManager.advertisingIdentifier
         
         let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
@@ -70,11 +68,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {}
     
 }
-    
-func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-    (AirBridge.getInstance("ce116649821f4c9fab702a34765735b2", appName:"delgo", withLaunchOptions:launchOptions) != nil)
-}
-
 
 //MARK: UNUserNotificationCenterDelegate
 extension AppDelegate: UNUserNotificationCenterDelegate {
