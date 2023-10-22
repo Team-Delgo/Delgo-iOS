@@ -10,6 +10,14 @@
 				<string>fb143920151720609</string>
 			</array>
 		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>delgo</string>
+			</array>
+		</dict>
 	</array>
 	<key>FacebookAppID</key>
 	<string>143920151720609</string>

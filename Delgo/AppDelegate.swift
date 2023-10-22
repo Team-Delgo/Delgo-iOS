@@ -55,8 +55,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
       
+        AirBridge.deeplink()?.handleURLSchemeDeeplink(url)
         FBSDKApplicationDelegate.sharedInstance().application(app, open: url)
+        
+        return true
     }
+    
+    //AirBridge handlerUserActivity
+    
+    func application(_ application: UIApplication,
+                     continue userActivity: NSUserActivity,
+                     restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool
+    {
+        AirBridge.deeplink()?.handle(userActivity)
+        
+        return true
+    }
+    
     
     
     // MARK: UISceneSession Lifecycle
