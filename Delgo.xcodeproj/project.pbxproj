@@ -26,6 +26,7 @@
 		4C2E740D29E9098100745BBB /* MyLocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLocationManager.swift; sourceTree = "<group>"; };
 		4C84CC8429ADD8B1001D3A20 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Main.strings; sourceTree = "<group>"; };
 		4C84CC8529ADD8B1001D3A20 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		4CE3221B2AE4EC5300BCFD51 /* DelgoRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DelgoRelease.entitlements; sourceTree = "<group>"; };
 		811B5EBF2961630800F7A77F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		81AB90CE294EDD9800700428 /* Delgo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Delgo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB90D1294EDD9800700428 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -75,6 +76,7 @@
 		81AB90D0294EDD9800700428 /* Delgo */ = {
 			isa = PBXGroup;
 			children = (
+				4CE3221B2AE4EC5300BCFD51 /* DelgoRelease.entitlements */,
 				81AB90ED294F417400700428 /* DTO */,
 				81AB90EC294EF87300700428 /* Delgo.entitlements */,
 				81AB90D1294EDD9800700428 /* AppDelegate.swift */,
@@ -444,7 +446,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.5.4;
+				MARKETING_VERSION = 2.5.5;
 				PRODUCT_BUNDLE_IDENTIFIER = com.delgo.delgoreward.Delgo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -460,7 +462,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = Delgo/Delgo.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Delgo/DelgoRelease.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = GGS2HY6B73;
@@ -500,7 +502,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.5.4;
+				MARKETING_VERSION = 2.5.5;
 				PRODUCT_BUNDLE_IDENTIFIER = com.delgo.delgoreward.Delgo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
