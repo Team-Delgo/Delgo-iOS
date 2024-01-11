@@ -10,8 +10,10 @@ target 'Delgo' do
     pod 'SnapKit', '~> 5.6.0'
     pod 'Then'
     pod 'FBAudienceNetwork'
-    pod 'FBSDKCoreKit/Swift'  
+    pod 'FBSDKCoreKit/Swift'
     pod 'AirBridge', '1.33.4'
+    pod 'SDWebImage'
+    pod 'SDWebImageWebPCoder'
 
   # Pods for Firebase
     # Add the Firebase pod for Google Analytics

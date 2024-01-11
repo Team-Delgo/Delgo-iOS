@@ -432,6 +432,7 @@
 				INFOPLIST_KEY_CFBundleDisplayName = Delgo;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.social-networking";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Delgo(델고)서비스에서 강아지와의 추억을 기록하기 위해서는 카메라에 접근이 필요합니다.";
+				INFOPLIST_KEY_NSLocationUsageDescription = "";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Delgo(델고) 서비스에서 강아지와의 추억을 정확한 위치에 기록을 하기 위해서는 이용자 위치정보의 접근이 필요합니다.";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Delgo(델고)서비스에서 강아지와의 추억을 기록하기 위해서는 엘범에 접근이 필요합니다.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -446,7 +447,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.5.5;
+				MARKETING_VERSION = 2.5.7;
 				PRODUCT_BUNDLE_IDENTIFIER = com.delgo.delgoreward.Delgo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -488,6 +489,7 @@
 				INFOPLIST_KEY_CFBundleDisplayName = Delgo;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.social-networking";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Delgo(델고)서비스에서 강아지와의 추억을 기록하기 위해서는 카메라에 접근이 필요합니다.";
+				INFOPLIST_KEY_NSLocationUsageDescription = "";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Delgo(델고) 서비스에서 강아지와의 추억을 정확한 위치에 기록을 하기 위해서는 이용자 위치정보의 접근이 필요합니다.";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Delgo(델고)서비스에서 강아지와의 추억을 기록하기 위해서는 엘범에 접근이 필요합니다.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -502,7 +504,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.5.5;
+				MARKETING_VERSION = 2.5.7;
 				PRODUCT_BUNDLE_IDENTIFIER = com.delgo.delgoreward.Delgo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
