@@ -12,6 +12,12 @@ import SDWebImageWebPCoder
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        setupApplication(application, launchOptions)
+        return true
+    }
+    
+    private func setupApplication(_ application: UIApplication, _ launchOptions: [UIApplication.LaunchOptionsKey: Any]?) {
         // Firebase 초기화
         FirebaseApp.configure()
         
@@ -41,8 +47,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // SDWebImageWebPCoder 초기화
         let WebPCoder = SDImageWebPCoder.shared
         SDImageCodersManager.shared.addCoder(WebPCoder)
-        
-        return true
     }
 
   

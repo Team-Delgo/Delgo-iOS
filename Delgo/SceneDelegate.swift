@@ -22,7 +22,20 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     window?.rootViewController = vc
     
     window?.makeKeyAndVisible()
+    
+      if let noti = connectionOptions.notificationResponse?.notification.request.content.userInfo {
+          딥링크로리다이렉트(noti)
+      }
+      
   }
+    
+    private func 딥링크로리다이렉트(_ noti: [AnyHashable: Any]) {
+        guard let urlData = noti["custom"] as? [String: Any] else { return }
+        if let imageURL = urlData["imageUrl"] as? String, let url = urlData["url"] as? String {
+            guard let url = URL(string: url) else { return }
+            NotificationCenter.default.post(name: Notification.Name("deeplink"), object: url)
+        }
+    }
   
   func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
     if let url = URLContexts.first?.url {
