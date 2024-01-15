@@ -41,7 +41,15 @@ final class MainWebViewController: UIViewController {
     super.viewWillAppear(animated)
     NotificationCenter.default.addObserver(self, selector: #selector(keyboardUp), name: UIResponder.keyboardWillShowNotification, object: nil)
     NotificationCenter.default.addObserver(self, selector: #selector(keyboardDown), name: UIResponder.keyboardWillHideNotification, object: nil)
+      NotificationCenter.default.addObserver(self, selector: #selector(loadURL(_:)), name: Notification.Name("deeplink"), object: nil)
   }
+
+    @objc
+    private func loadURL(_ notification: Notification) {
+        guard let url = notification.object as? URL else { return }
+        let request = URLRequest(url: url)
+        self.webView.load(request)
+    }
   
   private func setSwipeMotion() {
     let swipeRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipeGesture(_:)))

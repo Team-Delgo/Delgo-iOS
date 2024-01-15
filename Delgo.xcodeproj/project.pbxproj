@@ -10,6 +10,8 @@
 		4C2E740E29E9098100745BBB /* MyLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2E740D29E9098100745BBB /* MyLocationManager.swift */; };
 		4C72A3FE2AD9915900695017 /* AirBridge in Frameworks */ = {isa = PBXBuildFile; productRef = 4C72A3FD2AD9915900695017 /* AirBridge */; };
 		4C7EAA7A2AA6198F00B57D4C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AB90D1294EDD9800700428 /* AppDelegate.swift */; };
+		4CF2E0D22B54FC29005C9755 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF2E0D12B54FC29005C9755 /* NotificationService.swift */; };
+		4CF2E0D62B54FC29005C9755 /* NotificationService.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 4CF2E0CF2B54FC29005C9755 /* NotificationService.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		811B5EC02961630800F7A77F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 811B5EBF2961630800F7A77F /* GoogleService-Info.plist */; };
 		81AB90D4294EDD9800700428 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AB90D3294EDD9800700428 /* SceneDelegate.swift */; };
 		81AB90D9294EDD9800700428 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB90D7294EDD9800700428 /* Main.storyboard */; };
@@ -17,8 +19,33 @@
 		81AB90DE294EDD9900700428 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB90DC294EDD9900700428 /* LaunchScreen.storyboard */; };
 		81AB90E6294EDFB200700428 /* MainWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AB90E5294EDFB200700428 /* MainWebViewController.swift */; };
 		81AB90EF294F420900700428 /* FCMToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AB90EE294F420900700428 /* FCMToken.swift */; };
+		8ED912D926D40222701CE935 /* Pods_NotificationService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 593E3FC76E55EBDD6F1C3814 /* Pods_NotificationService.framework */; };
 		933693ACD74760DB77BB5B28 /* Pods_Delgo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0457D101974B1F3AE1E75D09 /* Pods_Delgo.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4CF2E0D42B54FC29005C9755 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 81AB90C6294EDD9800700428 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4CF2E0CE2B54FC29005C9755;
+			remoteInfo = NotificationService;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4CF2E0D72B54FC29005C9755 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				4CF2E0D62B54FC29005C9755 /* NotificationService.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0457D101974B1F3AE1E75D09 /* Pods_Delgo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Delgo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -27,6 +54,12 @@
 		4C84CC8429ADD8B1001D3A20 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Main.strings; sourceTree = "<group>"; };
 		4C84CC8529ADD8B1001D3A20 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		4CE3221B2AE4EC5300BCFD51 /* DelgoRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DelgoRelease.entitlements; sourceTree = "<group>"; };
+		4CF2E0CF2B54FC29005C9755 /* NotificationService.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = NotificationService.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		4CF2E0D12B54FC29005C9755 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		4CF2E0D32B54FC29005C9755 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4CF2E0DD2B5501AA005C9755 /* NotificationService.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NotificationService.entitlements; sourceTree = "<group>"; };
+		4CF2E0DE2B550290005C9755 /* NotificationService-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NotificationService-Bridging-Header.h"; sourceTree = "<group>"; };
+		593E3FC76E55EBDD6F1C3814 /* Pods_NotificationService.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NotificationService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		811B5EBF2961630800F7A77F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		81AB90CE294EDD9800700428 /* Delgo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Delgo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB90D1294EDD9800700428 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -39,10 +72,20 @@
 		81AB90EC294EF87300700428 /* Delgo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Delgo.entitlements; sourceTree = "<group>"; };
 		81AB90EE294F420900700428 /* FCMToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCMToken.swift; sourceTree = "<group>"; };
 		829B030C78136A491F4DAAB7 /* Pods-Delgo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Delgo.release.xcconfig"; path = "Target Support Files/Pods-Delgo/Pods-Delgo.release.xcconfig"; sourceTree = "<group>"; };
+		8C3E66AFB85B5239C91BA240 /* Pods-NotificationService.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NotificationService.debug.xcconfig"; path = "Target Support Files/Pods-NotificationService/Pods-NotificationService.debug.xcconfig"; sourceTree = "<group>"; };
 		D47FB7EA54175D0C64CDCAF6 /* Pods-Delgo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Delgo.debug.xcconfig"; path = "Target Support Files/Pods-Delgo/Pods-Delgo.debug.xcconfig"; sourceTree = "<group>"; };
+		E576BC5BE7EB609AABAF3D10 /* Pods-NotificationService.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NotificationService.release.xcconfig"; path = "Target Support Files/Pods-NotificationService/Pods-NotificationService.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		4CF2E0CC2B54FC29005C9755 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8ED912D926D40222701CE935 /* Pods_NotificationService.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		81AB90CB294EDD9800700428 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -55,10 +98,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4CF2E0D02B54FC29005C9755 /* NotificationService */ = {
+			isa = PBXGroup;
+			children = (
+				4CF2E0DD2B5501AA005C9755 /* NotificationService.entitlements */,
+				4CF2E0D12B54FC29005C9755 /* NotificationService.swift */,
+				4CF2E0D32B54FC29005C9755 /* Info.plist */,
+				4CF2E0DE2B550290005C9755 /* NotificationService-Bridging-Header.h */,
+			);
+			path = NotificationService;
+			sourceTree = "<group>";
+		};
 		81AB90C5294EDD9800700428 = {
 			isa = PBXGroup;
 			children = (
 				81AB90D0294EDD9800700428 /* Delgo */,
+				4CF2E0D02B54FC29005C9755 /* NotificationService */,
 				81AB90CF294EDD9800700428 /* Products */,
 				D97BD618BBF7A26F9A2D5109 /* Pods */,
 				B687B864B3D06C1A4608E23A /* Frameworks */,
@@ -69,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				81AB90CE294EDD9800700428 /* Delgo.app */,
+				4CF2E0CF2B54FC29005C9755 /* NotificationService.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -105,6 +161,7 @@
 			children = (
 				4C29A20B2A56E6DC007EC910 /* libz.tbd */,
 				0457D101974B1F3AE1E75D09 /* Pods_Delgo.framework */,
+				593E3FC76E55EBDD6F1C3814 /* Pods_NotificationService.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -114,6 +171,8 @@
 			children = (
 				D47FB7EA54175D0C64CDCAF6 /* Pods-Delgo.debug.xcconfig */,
 				829B030C78136A491F4DAAB7 /* Pods-Delgo.release.xcconfig */,
+				8C3E66AFB85B5239C91BA240 /* Pods-NotificationService.debug.xcconfig */,
+				E576BC5BE7EB609AABAF3D10 /* Pods-NotificationService.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -121,6 +180,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		4CF2E0CE2B54FC29005C9755 /* NotificationService */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4CF2E0DA2B54FC29005C9755 /* Build configuration list for PBXNativeTarget "NotificationService" */;
+			buildPhases = (
+				8A2BE9474C176418289B3CA4 /* [CP] Check Pods Manifest.lock */,
+				4CF2E0CB2B54FC29005C9755 /* Sources */,
+				4CF2E0CC2B54FC29005C9755 /* Frameworks */,
+				4CF2E0CD2B54FC29005C9755 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NotificationService;
+			productName = NotificationService;
+			productReference = 4CF2E0CF2B54FC29005C9755 /* NotificationService.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		81AB90CD294EDD9800700428 /* Delgo */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 81AB90E2294EDD9900700428 /* Build configuration list for PBXNativeTarget "Delgo" */;
@@ -130,10 +207,12 @@
 				81AB90CB294EDD9800700428 /* Frameworks */,
 				81AB90CC294EDD9800700428 /* Resources */,
 				4226E14903F65D199EFD96F5 /* [CP] Embed Pods Frameworks */,
+				4CF2E0D72B54FC29005C9755 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				4CF2E0D52B54FC29005C9755 /* PBXTargetDependency */,
 			);
 			name = Delgo;
 			packageProductDependencies = (
@@ -150,9 +229,12 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1340;
+				LastSwiftUpdateCheck = 1520;
 				LastUpgradeCheck = 1340;
 				TargetAttributes = {
+					4CF2E0CE2B54FC29005C9755 = {
+						CreatedOnToolsVersion = 15.2;
+					};
 					81AB90CD294EDD9800700428 = {
 						CreatedOnToolsVersion = 13.4.1;
 					};
@@ -176,11 +258,19 @@
 			projectRoot = "";
 			targets = (
 				81AB90CD294EDD9800700428 /* Delgo */,
+				4CF2E0CE2B54FC29005C9755 /* NotificationService */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		4CF2E0CD2B54FC29005C9755 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		81AB90CC294EDD9800700428 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -212,6 +302,28 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Delgo/Pods-Delgo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		8A2BE9474C176418289B3CA4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NotificationService-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		F7B33FAB1104067E36C78311 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -237,6 +349,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		4CF2E0CB2B54FC29005C9755 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CF2E0D22B54FC29005C9755 /* NotificationService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		81AB90CA294EDD9800700428 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -250,6 +370,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4CF2E0D52B54FC29005C9755 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4CF2E0CE2B54FC29005C9755 /* NotificationService */;
+			targetProxy = 4CF2E0D42B54FC29005C9755 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		81AB90D7294EDD9800700428 /* Main.storyboard */ = {
@@ -273,6 +401,75 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		4CF2E0D82B54FC29005C9755 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8C3E66AFB85B5239C91BA240 /* Pods-NotificationService.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_ENTITLEMENTS = NotificationService/NotificationService.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GGS2HY6B73;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NotificationService/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = NotificationService;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.delgo.delgoreward.Delgo.NotificationService;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4CF2E0D92B54FC29005C9755 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E576BC5BE7EB609AABAF3D10 /* Pods-NotificationService.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_ENTITLEMENTS = NotificationService/NotificationService.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GGS2HY6B73;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NotificationService/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = NotificationService;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.delgo.delgoreward.Delgo.NotificationService;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		81AB90E0294EDD9900700428 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -403,6 +600,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D47FB7EA54175D0C64CDCAF6 /* Pods-Delgo.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Delgo/Delgo.entitlements;
@@ -461,6 +659,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 829B030C78136A491F4DAAB7 /* Pods-Delgo.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Delgo/DelgoRelease.entitlements;
@@ -517,6 +716,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		4CF2E0DA2B54FC29005C9755 /* Build configuration list for PBXNativeTarget "NotificationService" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4CF2E0D82B54FC29005C9755 /* Debug */,
+				4CF2E0D92B54FC29005C9755 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		81AB90C9294EDD9800700428 /* Build configuration list for PBXProject "Delgo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

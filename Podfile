@@ -17,9 +17,15 @@ target 'Delgo' do
 
   # Pods for Firebase
     # Add the Firebase pod for Google Analytics
-   
-pod 'FirebaseAnalytics'
+    pod 'FirebaseAnalytics'
     pod 'FirebaseMessaging'
+    
+    target 'NotificationService' do
+       inherit! :search_paths
+       # Pods for NotificationService
+       pod 'SDWebImage'
+       pod 'SDWebImageWebPCoder'
+     end
 
 post_install do |installer|
     installer.generated_projects.each do |project|
